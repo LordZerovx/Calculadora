@@ -1,0 +1,90 @@
+body {
+    align-items: center;
+    background: linear-gradient(#3c00ff, rgb(92, 80, 255), black);
+    display: flex;
+    font-family: 'Dosis', sans-serif;
+    font-display: swap;
+    height: 100vh;
+    justify-content: center;
+}
+
+.wrapper{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    flex-basis: 400px;
+    height: 600px;
+    padding: 25px 15px;
+    border-radius: 40px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.Screen{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    letter-spacing: -7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px;
+    font-size: 55px;
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin
+    
+}
+
+.linha-botoes-calc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    box-shadow: #000000;
+}
+
+.botoes-calc{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    height: 75px;
+    padding: 20px 40px;
+    margin:2px;
+    
+}
+
+
+.botoes-calc-apagar{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    height: 75px;
+    width: 100%;
+    padding: 20px 35px;
+    margin:2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.botoes-calc-zero{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    height: 75px;
+    width: 100%;
+    padding: 20px 35px;
+    margin:2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
