@@ -15,6 +15,27 @@ function atualizarTela() {
 }
 atualizarTela()
 
+
+function calculoMatematico() {
+    if(operacaoAnterior === '+') {
+        totalCalculado += parseFloat(buffer);
+        buffer = totalCalculado;
+        atualizarTela();
+    } else if(operacaoAnterior === '−'){
+        totalCalculado -= parseFloat(buffer);
+        buffer = totalCalculado;
+        atualizarTela();
+    } else if(operacaoAnterior === '×'){
+        totalCalculado *= parseFloat(buffer);
+        buffer = totalCalculado;
+        atualizarTela();
+    } else if(operacaoAnterior === '÷'){
+        totalCalculado /= parseFloat(buffer);
+        buffer = totalCalculado;
+        atualizarTela();
+    }
+}
+
 botoes.forEach(botao => {
     botao.addEventListener('click', (event) => {
         event.stopPropagation();
@@ -22,17 +43,31 @@ botoes.forEach(botao => {
 
         if(digito === "←") return;
 
-
         switch(digito){
             case "=":
+                if(buffer === '0'){
+                    return;
+                } else {
+                    calculoMatematico();
+                    atualizarTela();
+                    return;
+                }
             case "+":
             case "−":
             case "×":
             case "÷":
-                return;
+                if(buffer === '0'){
+                    return;
+                } else {
+                    operacaoAnterior = digito;
+                    totalCalculado = parseFloat(buffer);
+                    buffer = '0';
+                    atualizarTela()
+                    return;
+                }
         }
 
-        if(buffer == '0') {
+        if(buffer === '0') {
             buffer = digito;
         } else {
             buffer += digito
@@ -59,3 +94,6 @@ botaoExcluir.addEventListener('click', (event) => {
     atualizarTela();
 });
 
+console.log(totalCalculado);
+console.log(buffer);
+console.log(operacaoAnterior);
