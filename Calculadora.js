@@ -93,7 +93,3 @@ botaoExcluir.addEventListener('click', (event) => {
     buffer = buffer.slice(0, -1) || "0";
     atualizarTela();
 });
-
-console.log(totalCalculado);
-console.log(buffer);
-console.log(operacaoAnterior);
