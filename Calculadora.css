@@ -8,17 +8,6 @@ body {
     justify-content: center;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-}
-
-.wrapper {
-    margin: 0 auto;
-    max-width: 100%;
-}
-
 .wrapper{
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
